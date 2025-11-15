@@ -1,0 +1,26 @@
+@use '../util' as u;
+
+.accessories-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+
+    .accessories-list li{
+        color: var(--white);
+        opacity: 0.9;
+        padding-left: 0.5em;
+        list-style-type: '\1F5F8';
+        font-size: 1.2rem;
+        line-height: 1.7em;
+        @include u.medium{
+            font-size: 1rem;
+            line-height: 1.5em;
+        }
+        @include u.small{
+            font-size: 0.9rem;
+            line-height: 1.4em;
+        }
+    }
+}

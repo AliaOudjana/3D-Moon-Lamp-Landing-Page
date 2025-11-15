@@ -1,0 +1,41 @@
+@use '../util' as u;
+
+.glowing-btn{
+    margin-top: 2rem;
+    padding: 0.625rem;
+    color: var(--bg-color2);
+    background-color: var(--darker-white);
+    box-shadow:  0 0 40px var(--glow-blue), 0 0 40px var(--glow-blue);
+    
+    border: none;
+    @include u.circular;
+    width: 8rem;
+    aspect-ratio: 1/1;
+    
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 2rem;
+
+    cursor: pointer;
+    transition: 0.3s;
+    
+    @include u.medium{
+        width: 6rem;
+        aspect-ratio: 1/1;
+        font-size: 1rem;
+        line-height: 1.8rem;
+    }
+    @include u.small{
+        width: 5rem;
+        aspect-ratio: 1/1;
+        font-size: 0.9rem;
+        line-height: 1.7rem;
+    }
+
+    &:hover{
+        background-color: var(--white);
+        box-shadow:  0 0 50px var(--glow-more-blue), 0 0 50px var(--glow-more-blue);
+    }
+}

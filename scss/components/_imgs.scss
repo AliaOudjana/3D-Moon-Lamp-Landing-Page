@@ -1,0 +1,47 @@
+@use '../util' as u;
+
+.img-container{
+    overflow: hidden;
+    box-shadow:  0 0 40px var(--glow-blue), 0 0 40px var(--glow-blue);
+    @include u.rounded;
+}
+
+.moon-lamp-img-container{
+    margin-top: 2em;
+    height: 20rem;
+    aspect-ratio: 1/1;
+    @include u.medium{
+        height: 17rem;
+    }
+    @include u.small{
+        height: 12rem;
+    }
+}
+
+.moon-lamp-img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.feature-img-container{
+    height: 15rem;
+    aspect-ratio: 1/1;
+    @include u.medium{
+        height: 12rem;
+    }
+    @include u.small{
+        height: 8rem;
+    }
+}
+
+.accessories-img-container{
+    background-color: var(--white);
+    width: 21rem;
+    aspect-ratio: 12/9;
+    @include u.medium{
+        width: 17rem;
+    }
+    @include u.small{
+        width: 12rem;
+    }
+}

@@ -1,0 +1,39 @@
+@use '../util' as u;
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 100%;
+    background: var(--bg-color2);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: 7rem 0.5rem 1rem;
+    transition: 0.7s ease-out;
+
+    @include u.big{
+        display: none;
+    }
+    @include u.medium{
+        width: 40%;
+        box-shadow: -1rem 0 5rem 1rem var(--bg-color2);
+    }
+
+    a{
+        color: var(--white);
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 1.3rem;
+        width: 95%;
+        padding: 0.8rem;
+        border-radius: 0.5rem;
+        &:hover{
+            color: var(--bg-color2);
+            background-color: var(--darker-white);
+            box-shadow:  0 0 30px var(--glow-blue), 0 0 30px var(--glow-blue);
+        }
+    }
+}

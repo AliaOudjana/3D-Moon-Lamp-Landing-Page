@@ -1,0 +1,53 @@
+@use '../util' as u;
+
+.features-cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.features-card{
+        background-color: var(--glass);
+        backdrop-filter: blur(12px);
+        margin: 0.9rem;
+        padding: 1rem;
+        display: grid;
+        justify-items: center;
+        grid-template-rows: 1fr auto 1fr;
+        border-radius: 1.8rem;
+        box-shadow: 0 0 20px var(--shadow), 0 0 20px var(--shadow);
+        border: 0.1em solid var(--low-opacity-white);
+        text-align: center;
+        width: 23rem;
+        border-width: 0.3rem;
+        
+        @include u.medium{
+            padding: 0.7rem;
+            width: 19.5rem;
+            border-width: 0.28rem;
+        }
+        @include u.small{
+            padding: 0.5rem;
+            width: 18rem;
+            border-width: 0.25rem;
+        }
+
+        & h3{
+            color: var(--white);
+            opacity: 0.9;
+            font-size: 1.875rem;
+
+            @include u.medium{
+                font-size: 1.4rem;
+            }
+            @include u.small{
+                font-size: 1.2rem;
+            }
+        }
+
+        & p{
+            color: var(--white);
+            opacity: 0.9;
+        }
+    }

@@ -1,0 +1,39 @@
+@mixin small{
+    @media (width <= 480px){
+        @content;
+    }
+}
+@mixin medium{
+    @media (768px >= width > 480px){
+        @content;
+    }
+}
+@mixin big{
+    @media (width > 768px){
+        @content;
+    }
+}
+
+@mixin rounded{
+    border-radius: 1.8rem;
+    @include medium{
+        border-radius: 1.5rem;
+    }
+    @include small{
+        border-radius: 1.2rem;
+    }
+}
+
+@mixin circular{
+    border-radius: 50%;
+}
+
+@mixin review-bubble{
+    border-radius: 5rem 5rem 5rem 0;
+    @include medium{
+        border-radius: 4rem 4rem 4rem 0;
+    }
+    @include small{
+        border-radius: 3rem 3rem 3rem 0;
+    }
+}

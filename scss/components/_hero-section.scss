@@ -1,0 +1,35 @@
+@use '../util' as u;
+
+#hero-section{
+    padding: 8rem 1rem 3rem;
+    @include u.medium{
+        padding: 6rem 1rem 3rem;
+    }
+    @include u.small{
+        padding: 4rem 1rem 3rem;
+    }
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 2rem;
+
+    p{
+        margin: 0;
+        color: var(--white);
+        @include u.small{
+            text-align: justify;
+        }
+    }
+    .txt-container{
+        max-width: 50%;
+        display: grid;
+        place-items: center;
+    }
+
+    @include u.medium{
+        gap: 1rem;
+    }
+    @include u.small{
+        gap: 0;
+    }
+}

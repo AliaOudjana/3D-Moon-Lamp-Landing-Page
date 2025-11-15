@@ -1,0 +1,89 @@
+@use '../util' as u;
+
+#order-section{
+    padding: 5rem 1rem 1rem;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+
+    p{
+        color: var(--white);  
+    }
+
+    @include u.medium{
+        gap: 1rem;
+    }
+    @include u.small{
+        gap: 0;
+    }
+}
+
+.order-form{
+    padding: 1rem;
+
+    & .glowing-btn{
+        display: flex;
+        margin: 2rem auto 1rem;
+        align-items: center;
+    }
+}
+
+.price{
+    font-size: 2.5rem;
+    margin-bottom: 0;
+    .dollar-symbol{
+        font-size: 1rem;
+        vertical-align: text-bottom;
+    }
+    .fraction{
+        font-size: 1rem;
+    }
+}
+
+select{
+    cursor: pointer;
+    width: 10rem;
+    border-radius: 0.5rem;
+    border: 2px solid var(--bg-color2);
+    background-color: var(--white);
+    color: var(--bg-color2);
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+
+    @include u.small{
+        font-size: 1rem;
+    }
+
+    &, &::picker(select){
+        appearance: base-select;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        border: 2px solid var(--bg-color2);
+        background-color: var(--white);
+    }
+    &::picker(select){
+        line-height: 2rem;
+    }
+    &::picker-icon{
+        display: none;
+    }
+    &:open{
+        background-color: var(--darker-white);
+    }
+}
+
+option{
+    &::checkmark{
+        display: none;
+    }
+}
+.picker{
+    fill: var(--bg-color2);
+    transition: 0.5s;
+    :open &{
+        rotate: -180deg;
+    }
+}
