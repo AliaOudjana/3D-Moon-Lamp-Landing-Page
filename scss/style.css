@@ -29,9 +29,6 @@ body::-webkit-scrollbar-thumb:hover {
   cursor: pointer;
   background: var(--darker-white);
 }
-body::-webkit-scrollbar {
-  width: 0.7rem;
-}
 
 html {
   scroll-behavior: smooth;
