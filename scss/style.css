@@ -29,6 +29,12 @@ body::-webkit-scrollbar-thumb:hover {
   cursor: pointer;
   background: var(--darker-white);
 }
+<<<<<<< HEAD
+=======
+body::-webkit-scrollbar {
+  width: 0.7rem;
+}
+>>>>>>> 1494ba8 (updated pfps and links)
 
 html {
   scroll-behavior: smooth;
@@ -817,4 +823,8 @@ footer .copyright {
 footer a {
   font-weight: 700;
   color: var(--white);
+<<<<<<< HEAD
 }/*# sourceMappingURL=style.css.map */
+=======
+}/*# sourceMappingURL=style.css.map */
+>>>>>>> 1494ba8 (updated pfps and links)
